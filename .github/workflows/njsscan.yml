@@ -22,9 +22,9 @@ jobs:
       id: njsscan
       uses: ajinabraham/njsscan-action@7237412fdd36af517e2745077cedbf9d6900d711
       with:
-        args: '. --sarif --output results.sarif || true'
+        args: '. --sarif --output results.html || true'
     - name: Upload results as artifact
       uses: actions/upload-artifact@v4
       with:
         name: scan-results
-        path: results.sarif
+        path: results.html
