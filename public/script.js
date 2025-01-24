@@ -28,3 +28,7 @@ document.getElementById('show-movies').addEventListener('click', function() {
         })
         .catch(error => console.error('Error fetching movies:', error));
 });
+document.getElementById('refresh').addEventListener('click', function () {
+    const listContainer = document.getElementById('list-container');
+    listContainer.innerHTML = ''; // Clear the content in the container
+});
